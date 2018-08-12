@@ -13,3 +13,6 @@
 
 # vscode 
 .vscode
+
+# config file
+airplay.yaml
