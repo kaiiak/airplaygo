@@ -1,0 +1,16 @@
+language: go
+
+go:
+  - "1.8"
+  - "1.9"
+  - "1.10"
+  - tip
+
+jobs:
+  include:
+    - stage: test
+      script: go test -cover -tags test -race -timeout 30s ./...
+    - stage: vet
+      script: go vet ./...
+    - stage: build
+      script: go build -v .
