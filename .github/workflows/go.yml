@@ -31,8 +31,8 @@ jobs:
       - name: Check
         run: go vet ./...
 
-      - name: Build
-        run: go build -v .
-
       - name: Test
-        run: go test -v ./...
+        run: go test -cover -tags test -race -timeout 30s ./...
+
+      - name: Build
+        run: go build -v -o airplay.o
