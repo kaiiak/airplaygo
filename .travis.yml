@@ -11,4 +11,4 @@ jobs:
     - stage: vet
       script: go vet ./...
     - stage: build
-build      script: go build -v -o airplay.o cmd/main.go
+      script: go build -v -o airplay.o cmd/main.go
